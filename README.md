@@ -1,5 +1,7 @@
 # gothbarbie-dark-syntax theme
 
-A short description of your theme.
+My first attempt of making a dark syntax theme for Atom.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+![HTML](https://www.dropbox.com/s/1om2z2tg3827lxo/html.jpg?dl=0)
+
+![Javascript](https://www.dropbox.com/s/2xlxmrask6f8qbx/javascript.jpg?dl=0)
