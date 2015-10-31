@@ -1,0 +1,15 @@
+{
+  "name": "gothbarbie-dark-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A first attempt of a dark syntax theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/gothbarbie/gothbarbie-dark-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
