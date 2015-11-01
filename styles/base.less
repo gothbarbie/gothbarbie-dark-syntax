@@ -67,6 +67,10 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .entity {
+  &.name.function.php,
+  &.name.function.js {
+    color: saturate(lighten(@blue, 10%), 40%);
+  }
   &.name.type {
     color: @light-orange;
     text-decoration: underline;
@@ -81,11 +85,15 @@ atom-text-editor .search-results .marker.current-result .region,
   color: darken(@blue, 10%);
 
   &.control {
-    color: saturate(lighten(@blue, 10%), 40%);
+    color: @purple;
   }
 
   &.operator {
     color: @syntax-text-color;
+
+    &.string.php {
+        color: @purple;
+    }
   }
 
   &.other.special-method {
@@ -99,9 +107,21 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .storage {
   color: @purple;
-}
-.storage.type.function {
-  color: saturate(lighten(@blue, 10%), 40%);
+
+  &.type.php {
+    color: @light-orange;
+  }
+  &.type.function.php,
+  &.type.class.php {
+      color: @purple;
+  }
+  &.type.function.js {
+    color: saturate(lighten(@blue, 10%), 40%);
+  }
+
+  &.modifier {
+      font-style: italic;
+  }
 }
 
 .constant {
@@ -125,14 +145,16 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .variable {
-  color: @red;
-
+  color: @purple;
+  &.other.php {
+      color: saturate(darken(@purple, 10%), 10%);
+  }
   &.interpolation {
-    color: darken(@red, 10%);
+    color: @purple;
   }
 
   &.parameter.function {
-    color: darken(@blue, 15%);
+    color: saturate(darken(@purple, 10%), 10%);
   }
 }
 
@@ -159,6 +181,9 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .punctuation {
+  &.terminator {
+    color: @syntax-text-color;
+  }
   &.definition {
     &.comment {
       color: @light-gray;
@@ -171,6 +196,9 @@ atom-text-editor .search-results .marker.current-result .region,
     &.parameters,
     &.array {
       color: @syntax-text-color;
+    }
+    &.variable.php {
+        color: saturate(darken(@purple, 10%), 10%);
     }
 
     &.heading,
@@ -195,13 +223,22 @@ atom-text-editor .search-results .marker.current-result .region,
 
 }
 
+.source {
+    //color: saturate(darken(@purple, 10%), 10%);
+}
+
 .support {
   &.class {
     color: @light-orange;
+    font-weight: bold;
+  }
+
+  &.function.magic {
+    color: saturate(lighten(@blue, 10%), 40%);
   }
 
   &.function  {
-    color: @cyan;
+    color: desaturate(@cyan, 25%);
 
     &.any-method {
       color: @blue;
@@ -227,6 +264,10 @@ atom-text-editor .search-results .marker.current-result .region,
     text-decoration: underline;
   }
 
+  &.other.inherited-class.php {
+      color: @light-orange;
+  }
+
   &.other.attribute-name {
     color: @orange;
 
@@ -237,6 +278,9 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .meta {
+  &.brace {
+      color: @syntax-text-color;
+  }
   &.class {
     color: @light-orange;
   }
@@ -256,6 +300,14 @@ atom-text-editor .search-results .marker.current-result .region,
   &.separator {
     background-color: @gray;
     color: @syntax-text-color;
+  }
+
+  &.function-call {
+      color: desaturate(@cyan, 25%);
+      &.static,
+      &.object {
+        color: saturate(lighten(@blue, 10%), 40%);
+      }
   }
 }
 
